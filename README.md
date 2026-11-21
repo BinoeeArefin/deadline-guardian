@@ -26,6 +26,7 @@ Calendars warn you on the day of the deadline, or when you set an alarm yourself
 4. **Overload detection.** Flags days where two or more tasks need work at the same time. It then builds a day-by-day plan (one task per day where possible, tasks with later deadlines placed as late as possible) and tells you what to start first and which tasks to move earlier.
 5. **"I missed today" button.** Marks today as lost, recalculates every status and the plan from tomorrow, and explains what changed (e.g. "Lab assignment 2: 🟡 Start today → 🔴 At risk").
 6. Calendar export (.ics): start-by reminders + deadlines for Google Calendar / Outlook.
+7. Leave-by / wake-up times for exams and presentations, based on your own travel time, and a one-click link to live DKV departures in Google Maps.
 
 The AI handles the language parts (reading messy text, estimating effort). The warnings, overload flags and plan are **deterministic rules** in `planner.py`, so every warning can be explained.
 
@@ -87,3 +88,4 @@ All code was written on 21 November 2026, during the hackathon.
 - Learn your personal speed from past tasks ("you usually need 1.5× the estimate")
 - Push / email reminders on the start-by date
 - Leave-by time for exams from the DKV timetable
+
