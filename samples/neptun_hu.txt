@@ -1,0 +1,27 @@
+Neptun üzenet
+Feladó: Dr. Szabó Péter
+Tárgy: Adatbázisrendszerek (gyakorlat) - beadandó, ZH és vizsga időpontok
+
+Kedves Hallgatók!
+
+Az alábbiakban összefoglalom a félév hátralévő számonkéréseit.
+
+1. Beadandó feladat: 20 SQL lekérdezés és egy ER-diagram a kiadott
+egyetemi könyvtár adatbázishoz. A félévi gyakorlati jegy 25%-át adja.
+Leadási határidő: 2026. november 24. (kedd) 23:59, a Moodle felületen.
+Késve leadott megoldást nem fogadok el.
+
+2. Második zárthelyi dolgozat (ZH): 2026. november 30. (hétfő) 8:00,
+IK-205-ös terem. Anyag: normalizálás, tranzakciókezelés, indexek.
+A ZH 90 perces, segédeszköz nem használható.
+
+3. Projektbemutató: 2026. december 9-én (szerda) a gyakorlat idejében, 10:00-tól,
+csoportonként 10 perc. A bemutató sorrendjét a Moodle-on teszem közzé.
+
+4. Írásbeli vizsga: 2027. január 11. (hétfő) 9:00, Főépület, Aula.
+A vizsgára a Neptunban jelentkezni kell, a teljes féléves anyagból.
+
+A konzultáció csütörtökönként 14:00-kor lesz a 312-es irodában.
+
+Üdvözlettel:
+Dr. Szabó Péter

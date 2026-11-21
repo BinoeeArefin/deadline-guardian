@@ -1,0 +1,27 @@
+MACHINE LEARNING - Course Syllabus (Fall semester 2026/27)
+MSc in Computer Science, Faculty of Informatics, University of Debrecen
+Lecturer: Dr. A. Kovács   |   Lectures: Monday 12:00-14:00, IK-F01
+Office hours: Wednesday 10:00-11:00, room IK-226 (no appointment needed)
+
+GRADING
+- Lab assignments (4 x 5%) .................... 20%
+- Midterm exam ................................ 30%
+- Project proposal presentation .............. 10%
+- Final project report + code ................ 40%
+
+SCHEDULE AND DEADLINES
+Week 11: Lab assignment 2 - Logistic regression notebook. A short Jupyter
+notebook, roughly 2 hours of work. Upload to Moodle by Monday, 23 November 2026, 23:59.
+
+Week 12: Midterm exam - written, closed book, covers lectures 1-8
+(linear models, SVMs, decision trees, ensembles, evaluation).
+Date: Monday, 30 November 2026, 10:00. Room: IK-F01. Bring your student ID.
+
+Week 12: Project proposal presentation (teams of 3). 10 minutes + 5 minutes Q&A.
+Thursday, 3 December 2026, 14:00, room IK-F02. Slides must be uploaded to Moodle
+one hour before your slot.
+
+Week 14: Final project report (8-10 pages, IEEE format) and code repository.
+Deadline: Friday, 11 December 2026, 23:59, submitted via Moodle.
+
+Note: There is no lecture on 7 December (Faculty Day). Late submissions lose 10% per day.
