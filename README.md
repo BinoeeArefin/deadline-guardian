@@ -1,4 +1,5 @@
 # 🛡️ Deadline Guardian
+🔗 **Live demo:** https://deadline-guardian-debrecen.streamlit.app (no install needed, just click)
 
 **Deadline Guardian reads your syllabus and university emails, estimates how long each task really takes, and warns you early enough to finish it. Built for University of Debrecen students.**
 
