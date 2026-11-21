@@ -12,6 +12,7 @@ Run:  streamlit run app.py      (needs GEMINI_API_KEY)
 import html
 import json
 import os
+import urllib.parse
 from datetime import date, datetime, timedelta
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -487,6 +488,7 @@ with st.sidebar:
                                  value=30, step=5, key="travel_min")
     ready_min = st.number_input("⏰ Time to get ready (minutes)", min_value=0, max_value=240,
                                 value=45, step=5, key="ready_min")
+    home = st.text_input("🏠 Your home address or stop", value="Debrecen, Nagyállomás", key="home")
 
     st.divider()
     st.markdown("**The rule**")
@@ -698,6 +700,26 @@ with st.container(border=True):
     st.caption("Unlike a calendar, which only alerts on the day (or when you set an alarm), "
                "this warning is automatic and based on how much work the task needs.")
     st.caption("Leave by / Wake up: based on your own travel time. Live DKV tram/bus timetables are a next step.")
+
+    # Trip lines: next 3 upcoming exams/presentations with a location, soonest first
+    trips = sorted([t for t in tasks if t["type"] in ("exam", "presentation") and t["deadline"]
+                    and t["location"] and t["deadline"].date() >= today], key=lambda t: t["deadline"])[:3]
+    for t in trips:
+        dl = t["deadline"]
+        arrive = dl - timedelta(minutes=10)
+        leave = dl - timedelta(minutes=int(travel_min) + 10)
+        wake = leave - timedelta(minutes=int(ready_min))
+        maps_url = ("https://www.google.com/maps/dir/?api=1"
+                    f"&origin={urllib.parse.quote_plus(home or 'Debrecen')}"
+                    f"&destination={urllib.parse.quote_plus(t['location'] + ', University of Debrecen, Debrecen')}"
+                    "&travelmode=transit")
+        tc1, tc2 = st.columns([3, 1])
+        tc1.markdown(f"{TYPE_ICON.get(t['type'], '📝')} **{t['task']}** · {fmt_day(dl.date())} {dl:%H:%M} at "
+                     f"{t['location']} → arrive by {arrive:%H:%M} · Leave {leave:%H:%M} · Wake {wake:%H:%M}")
+        tc2.link_button("🚋 Live trams & buses (Google Maps)", maps_url)
+    if trips:
+        st.caption("Leave/wake times use your own travel time. The button opens Google Maps, which shows DKV's "
+                   "real-time departures. Direct DKV data integration (GTFS-RT) is a next step.")
 
     if any(t["deadline"] for t in tasks):
         st.download_button("📅 Add warnings to my calendar (.ics)", data=build_ics(tasks, statuses),
