@@ -426,7 +426,7 @@ STATUS_TINTS = {"green": "#F0FDF4", "yellow": "#FFFBEB", "red": "#FEF2F2", "grey
 
 st.markdown("""<style>
 .stApp {background:#FFFFFF;}
-.block-container, [data-testid="stMainBlockContainer"] {max-width:1200px; margin:0 auto; padding-top:1.5rem;}
+.block-container, [data-testid="stMainBlockContainer"] {max-width:1200px; margin:0 auto; padding-top:4rem;}
 [data-testid="stVerticalBlockBorderWrapper"] {background:#FFFFFF; border:1px solid #E2E8F0 !important;
   border-radius:12px !important; box-shadow:0 1px 3px rgba(15,23,42,0.06);}
 h1, h2, h3, h4 {color:#0F172A !important; font-weight:600 !important;}
